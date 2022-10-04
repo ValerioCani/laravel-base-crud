@@ -30,11 +30,20 @@ main{
         text-align: center;
     }
     .btn-create{
-        background-color: rgb(38, 71, 255);
+        background-color: #2647ff;
         color:#fff;
     }
     .btn-show{
-        background-color: rgb(89, 231, 89);
+        background-color: #59e759;
+        color:#000;
+    }
+    .btn-edit{
+        background-color: #f0ed45;
+        color:#461ce0;
+    }
+    .btn-cancel{
+        background-color: #c40c0c;
+        color:#deaa1b;
     }
     .container{
         max-width: 1200px;

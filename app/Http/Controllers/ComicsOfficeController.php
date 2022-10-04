@@ -62,7 +62,11 @@ class ComicsOfficeController extends Controller
     public function show($id)
     {
         $comic = Comic::find($id);
-        return view('comics.showComic', compact('comic'));
+        if($comic){
+            return view('comics.showComic', compact('comic'));
+        }else{
+            abort(404);
+        }
     }
 
     /**
@@ -73,7 +77,13 @@ class ComicsOfficeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::find($id);
+        if($comic){
+            return view('comics.editComic', compact('comic'));
+        }else{
+            abort(404);
+        }
+
     }
 
     /**
@@ -85,7 +95,16 @@ class ComicsOfficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = Comic::find($id);
+        if($comic){
+            $data = $request->all();
+            $comic->update($data);
+            $comic->save();
+
+            return redirect()->route('comics.index');
+        }else{
+            abort(404);
+        }
     }
 
     /**
