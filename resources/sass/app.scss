@@ -29,13 +29,12 @@ main{
     h1{
         text-align: center;
     }
-    .btn{
-        display: inline-block;
+    .btn-create{
         background-color: rgb(38, 71, 255);
-        text-decoration: none;
-        padding: 5px;
-        border-radius: 5px;
         color:#fff;
+    }
+    .btn-show{
+        background-color: rgb(89, 231, 89);
     }
     .container{
         max-width: 1200px;
@@ -43,6 +42,12 @@ main{
         display: flex;
         justify-content: center;
         padding: 50px 0;
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
         table{
             border-collapse: collapse;
             text-align: left;
@@ -61,6 +66,13 @@ main{
             *{
                 font-size: 20px;
             }
+        }
+        .show{
+            width: 40%;
+            padding: 20px;
+        }
+        .show-image{
+            text-align: right;
         }
     }
 }

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <a class='btn' href="{{route('comics.create')}}">Aggiungi Articolo</a>
+    <a class="btn btn-create" href="{{route('comics.create')}}">Aggiungi Articolo</a>
 </div>
 <div class="container">
         <table>
@@ -15,6 +15,7 @@
                 <th>Series</th>
                 <th>Sale Date</th>
                 <th>Type</th>
+                <th>Actions</th>
             </tr>
             @foreach ($comics as $comic)
                 <tr>
@@ -24,6 +25,9 @@
                     <td>{{$comic->series}}</td>
                     <td>{{$comic->sale_date}}</td>
                     <td>{{$comic->type}}</td>
+                    <td>
+                        <a class="btn btn-show" href="{{route('comics.show', ['comic'=>$comic->id])}}">Show</a>
+                    </td>
                 </tr>
             @endforeach
         </table>

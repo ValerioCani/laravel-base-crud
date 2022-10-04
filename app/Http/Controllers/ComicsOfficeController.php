@@ -61,7 +61,8 @@ class ComicsOfficeController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = Comic::find($id);
+        return view('comics.showComic', compact('comic'));
     }
 
     /**

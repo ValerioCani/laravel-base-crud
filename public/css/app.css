@@ -33,13 +33,13 @@ main h1 {
   text-align: center;
 }
 
-main .btn {
-  display: inline-block;
+main .btn-create {
   background-color: rgb(38, 71, 255);
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
   color: #fff;
+}
+
+main .btn-show {
+  background-color: rgb(89, 231, 89);
 }
 
 main .container {
@@ -48,6 +48,13 @@ main .container {
   display: flex;
   justify-content: center;
   padding: 50px 0;
+}
+
+main .container .btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 main .container table {
@@ -72,5 +79,14 @@ main .container .input {
 
 main .container .input * {
   font-size: 20px;
+}
+
+main .container .show {
+  width: 40%;
+  padding: 20px;
+}
+
+main .container .show-image {
+  text-align: right;
 }
 
