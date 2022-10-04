@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comic;
 use Illuminate\Http\Request;
 
 class ComicsOfficeController extends Controller
@@ -13,7 +14,8 @@ class ComicsOfficeController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+        return view('comics.comicslist', compact('comics'));
     }
 
     /**

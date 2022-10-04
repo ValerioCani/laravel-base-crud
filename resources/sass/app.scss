@@ -1,1 +1,52 @@
-//
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 50px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        padding: 10px;
+        img{
+            height: 100%;
+        }
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        .links{
+            padding: 15px;
+            text-decoration: none;
+        }
+    }
+}
+
+main{
+    h1{
+        text-align: center;
+    }
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+
+        table{
+            border-collapse: collapse;
+            text-align: left;
+            tr:nth-child(2n){
+                background: rgb(209, 209, 209);
+            }
+            td{
+                padding: 5px 15px 5px 0px;
+            }
+        }
+    }
+}
+
+
