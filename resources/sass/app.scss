@@ -44,6 +44,7 @@ main{
     .btn-cancel{
         background-color: #c40c0c;
         color:#deaa1b;
+
     }
     .container{
         max-width: 1200px;
@@ -56,6 +57,7 @@ main{
             text-decoration: none;
             padding: 5px;
             border-radius: 5px;
+            border: none;
         }
         table{
             border-collapse: collapse;
@@ -65,6 +67,9 @@ main{
             }
             td{
                 padding: 5px 15px 5px 0px;
+            }
+            .buttons-column{
+                display: flex;
             }
         }
         .input{
