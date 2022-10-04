@@ -29,13 +29,20 @@ main{
     h1{
         text-align: center;
     }
+    .btn{
+        display: inline-block;
+        background-color: rgb(38, 71, 255);
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+        color:#fff;
+    }
     .container{
         max-width: 1200px;
         margin: auto;
         display: flex;
         justify-content: center;
         padding: 50px 0;
-
         table{
             border-collapse: collapse;
             text-align: left;
@@ -44,6 +51,15 @@ main{
             }
             td{
                 padding: 5px 15px 5px 0px;
+            }
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            font-size: 20px;
+            *{
+                font-size: 20px;
             }
         }
     }

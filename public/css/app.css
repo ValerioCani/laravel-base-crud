@@ -33,6 +33,15 @@ main h1 {
   text-align: center;
 }
 
+main .btn {
+  display: inline-block;
+  background-color: rgb(38, 71, 255);
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
 main .container {
   max-width: 1200px;
   margin: auto;
@@ -52,5 +61,16 @@ main .container table tr:nth-child(2n) {
 
 main .container table td {
   padding: 5px 15px 5px 0px;
+}
+
+main .container .input {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+main .container .input * {
+  font-size: 20px;
 }
 

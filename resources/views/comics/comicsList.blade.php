@@ -3,7 +3,10 @@
 @section('page_title', 'Comics List')
 
 @section('content')
-    <div class="container">
+<div class="container">
+    <a class='btn' href="{{route('comics.create')}}">Aggiungi Articolo</a>
+</div>
+<div class="container">
         <table>
             <tr>
                 <th>#</th>
