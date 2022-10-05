@@ -81,6 +81,10 @@ main{
                 font-size: 20px;
             }
         }
+        .invalid-feedback{
+            color: red;
+            font-size: 12px;
+        }
         .show{
             width: 40%;
             padding: 20px;
@@ -89,6 +93,10 @@ main{
             text-align: right;
         }
     }
+}
+
+.is-invalid{
+    border: solid 1px red;
 }
 
 

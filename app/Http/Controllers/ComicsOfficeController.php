@@ -36,17 +36,23 @@ class ComicsOfficeController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->validate(
+            [
+            'title' => 'required|max:100',
+            'description' => 'required|max:65535',
+            'thumb' => 'required|url|max:255',
+            'price' => 'required|min:4|max:10',
+            'series' => 'required|min:5|max:50',
+            'sale_date' => 'required|date_format:Y-m-d',
+            'type' => 'required|min:5|max:30'
+            ]
+        );
+
         $data = $request->all();
 
         $newComic = new Comic();
 
-        $newComic->title = $data['title'];
-        $newComic->description = $data['description'];
-        $newComic->thumb = $data['thumb'];
-        $newComic->price = $data['price'];
-        $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
-        $newComic->type = $data['type'];
+        $newComic->fill($data);
 
         $newComic->save();
 

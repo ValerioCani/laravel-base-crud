@@ -97,6 +97,11 @@ main .container .input * {
   font-size: 20px;
 }
 
+main .container .invalid-feedback {
+  color: red;
+  font-size: 12px;
+}
+
 main .container .show {
   width: 40%;
   padding: 20px;
@@ -104,5 +109,9 @@ main .container .show {
 
 main .container .show-image {
   text-align: right;
+}
+
+.is-invalid {
+  border: solid 1px red;
 }
 

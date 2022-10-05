@@ -6,3 +6,6 @@ Ciao ragazzi,
 
 <!-- Oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD. -->
 Bonus: tramite javascript, quando l’utente clicca sul pulsante “delete”, chiedere conferma della cancellazione, prima di eliminare l’elemento. :occhiolino:
+
+Oggi lavorate sulla stessa repo di ieri ed aggiungete le validazioni come visto stamani in classe!
+Buon lavoro!
