@@ -36,15 +36,31 @@ class ComicsOfficeController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate(
+        $request->validate(
             [
-            'title' => 'required|max:100',
-            'description' => 'required|max:65535',
-            'thumb' => 'required|url|max:255',
-            'price' => 'required|min:4|max:10',
-            'series' => 'required|min:5|max:50',
-            'sale_date' => 'required|date_format:Y-m-d',
-            'type' => 'required|min:5|max:30'
+                'title' => 'required|max:100',
+                'description' => 'required|max:65535',
+                'thumb' => 'required|url|max:255',
+                'price' => 'required|min:4|max:10',
+                'series' => 'required|min:5|max:50',
+                'sale_date' => 'required|date_format:Y-m-d',
+                'type' => 'required|min:5|max:30'
+            ],
+            [
+                'title.required' => 'SCRIVI QUALCOSA!!',
+                'title.max' => 'SCRIVI MENOOOO!!',
+                'description.required' => 'SCRIVI QUALCOSA!!',
+                'description.max' => 'SCRIVI MENOOOO!!',
+                'thumb.required' => 'SCRIVI QUALCOSA!!',
+                'thumb.max' => 'SCRIVI MENOOOO!!',
+                'price.required' => 'SCRIVI QUALCOSA!!',
+                'price.max' => 'SCRIVI MENOOOO!!',
+                'series.required' => 'SCRIVI QUALCOSA!!',
+                'series.max' => 'SCRIVI MENOOOO!!',
+                'sale_date.required' => 'SCRIVI QUALCOSA!!',
+                'sale_date.max' => 'SCRIVI MENOOOO!!',
+                'type.required' => 'SCRIVI QUALCOSA!!',
+                'type.max' => 'SCRIVI MENOOOO!!',
             ]
         );
 
@@ -101,6 +117,18 @@ class ComicsOfficeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $data = $request->validate(
+            [
+            'title' => 'required|max:100',
+            'description' => 'required|max:65535',
+            'thumb' => 'required|url|max:255',
+            'price' => 'required|min:4|max:10',
+            'series' => 'required|min:5|max:50',
+            'sale_date' => 'required|date_format:Y-m-d',
+            'type' => 'required|min:5|max:30'
+            ]
+        );
+
         $comic = Comic::find($id);
         if($comic){
             $data = $request->all();
